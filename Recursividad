@@ -1,0 +1,10 @@
+def printRev( n ): # 
+    if n > 0:
+      print( n )
+      printRev( n - 1 ) 
+
+print("Comienza la cuenta regresiva....")
+n = 20
+printRev( n )
+print( 0 )
+print("BOOOOOOM")
