@@ -1,0 +1,25 @@
+class Array():
+  def __init__(self, tamano):
+    self.__tamano = tamano
+    self.__data = [0 for x in range(self.__tamano)]  #generator
+
+  def get_item( self , index):
+    return self.__data[index]
+
+  def to_string(self):
+    print(self.__data)   
+
+  def set_item(self,index , valor):
+        if self.__check_limits__(index):
+            self.__data[index]=valor
+        else:
+            raise Exception('Error de limites en index')
+
+  def clear(self, valor):
+    self.__data=[valor for x in range(self.__tamano)]
+
+  def get_length( self ):
+    return self.__tamano
+  
+  def __check_limits__( self , index ):
+    return index >=0 and index < self.__tamano
